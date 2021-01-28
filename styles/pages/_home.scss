@@ -1,0 +1,209 @@
+.app-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    darken($color-primary, 5%),
+    lighten($color-primary, 30%)
+  );
+
+  &__header {
+    font-size: $base-font-size * 3;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    padding-top: 30px;
+  }
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+
+  &__header {
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 10px 0 20px;
+    margin-bottom: 20px;
+    font-size: $base-font-size * 2;
+    border-bottom: 2px dotted darken($color-primary, 50%);
+    width: 80%;
+  }
+
+  &__form-wrapper {
+    width: 80%;
+    height: 40px;
+    padding-bottom: 20px;
+  }
+
+  &__input-wrapper {
+    width: 80%;
+    display: flex;
+    height: 40px;
+    padding-bottom: 20px;
+  }
+
+  &__input-author {
+    flex: 2;
+    width: 100%;
+    margin: 0 10px;
+    font-size: $base-font-size * 1.2;
+    color: darken($color-primary, 20%);
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    &::placeholder {
+      color: #ddd;
+      font-weight: bold;
+    }
+  }
+
+  &__input-message {
+    flex: 6;
+    width: 100%;
+    margin: 0 10px;
+    font-size: $base-font-size * 1.2;
+    color: darken($color-primary, 20%);
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    &::placeholder {
+      color: #ddd;
+      font-weight: bold;
+    }
+  }
+
+  &__add-post {
+    flex: 2;
+    width: 100%;
+    margin: 0 10px;
+    font-size: $base-font-size * 1.2;
+    color: #ddd;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    letter-spacing: 2px;
+    border: 1px solid #ddd;
+    background-image: linear-gradient(
+      lighten($color-primary, 5%),
+      darken($color-primary, 10%),
+      lighten($color-primary, 5%)
+    );
+    border-radius: 10px;
+    transition: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      border-color: transparent;
+      border-radius: 20px;
+    }
+  }
+
+  &__result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.post {
+  position: relative;
+  border: 1px solid $color-primary;
+  border-radius: 5px;
+  padding: 20px 10px;
+  background-image: radial-gradient(
+    (lighten($color-primary, 10%)),
+    darken($color-primary, 10%)
+  );
+  width: 80%;
+  margin: 5px 0;
+  color: #ccc;
+
+  &__author {
+    padding-left: 10px;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+
+  &__text {
+    padding-top: 20px;
+    border-top: 1px solid darken($color-primary, 10%);
+  }
+
+  &__btn-remove {
+    position: absolute;
+    font-size: $base-font-size;
+    right: 10px;
+    bottom: 10px;
+    color: white;
+    background-image: linear-gradient(
+      lighten(red, 10%),
+      darken(red, 20%),
+      lighten(red, 10%)
+    );
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+  }
+
+  &__icon-like {
+    padding-top: 20px;
+    cursor: pointer;
+  }
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+
+  &__header {
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 10px 0 20px;
+    margin-bottom: 20px;
+    font-size: $base-font-size * 2;
+    border-bottom: 2px dotted darken($color-primary, 50%);
+    width: 80%;
+  }
+}
+
+.article {
+  &__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    border: 2px dotted darken($color-primary, 10%);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  &__title {
+    font-size: $base-font-size * 1.7;
+    border-bottom: 2px solid $color-primary;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__author {
+    font-size: $base-font-size * 1.2;
+    border-bottom: 1px dotted $color-primary;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    padding: 20px 0;
+  }
+}
